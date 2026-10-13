@@ -13,6 +13,6 @@ This lab helped me connect basic Linux commands with the information they provid
 
 The lab also reminded me to be precise when describing my work. I should clearly separate tools I actually used from tools I only researched for a scenario.
 
-## Next step
+## Related project and next step
 
-My next goal is to apply these Linux and networking fundamentals in a small log-analysis project. I would like to generate test authentication activity, review the resulting logs, and document how I identify and investigate failed login attempts.
+I have since completed a separate [Windows authentication-monitoring project with Splunk Cloud](https://github.com/Samin-Alikhani/Splunk-Windows-Authentication-Monitoring), including controlled failed-logon tests and scheduled-alert validation. A future extension would apply these Linux fundamentals to a Linux authentication investigation; that work is not yet included here.
