@@ -29,7 +29,7 @@ I built this project to strengthen my Linux and networking fundamentals. The exe
 
 ## Highlights
 
-### Host and network Awareness
+### Host and Network Awareness
 
 I used standard Linux utilities to inspect boot time, kernel information, storage, interfaces, DNS results, and the current working directory. Rather than treating the output as a checklist, I connected each command to an analyst use case such as validating a reboot, identifying network context, or checking available storage before collecting evidence.
 
@@ -59,8 +59,10 @@ echo "$SHELL"
 printf '%s\n' "$PATH"
 ```
 
-Outputs are intentionally omitted because they can expose usernames, hostnames, IP addresses, and lab infrastructure. Selected screenshots may be added later after they have been reviewed and sanitized.
+Raw command outputs are omitted from this overview. Selected screenshots are already included in [Linux Fundamentals](linux-fundamentals.md) and the [screenshots directory](screenshots/); network identifiers were removed before publication.
 
-## Next Iteration
+## Related SOC Project
 
-The next iteration will turn these fundamentals into a small SOC investigation: generate benign authentication activity, forward logs to Wazuh or Splunk, identify failed-login patterns, and document the triage process with a timeline and detection notes.
+I have since applied the habit of checking system state, permissions, and network context in my [Windows Authentication Monitoring with Splunk Cloud](https://github.com/Samin-Alikhani/Splunk-Windows-Authentication-Monitoring) project. That separate Windows lab documents log collection, controlled failed-login tests, a scheduled alert, and an authentication dashboard.
+
+A future extension would be a Linux authentication investigation with its own evidence and triage notes; that work is not yet documented here.
