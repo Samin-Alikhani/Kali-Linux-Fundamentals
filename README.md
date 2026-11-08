@@ -1,8 +1,8 @@
 # Kali Linux Fundamentals
 
-This project documents my hands-on practice with Linux administration and introductory security concepts in an authorized Kali Linux lab environment. I worked with system information, network configuration, filesystem navigation, environment variables, and file permissions. I also researched how several Kali tools apply to common security scenarios.
+This project documents my hands-on practice with Linux administration and introductory security concepts in an authorized Kali Linux lab environment. I worked with system information, network configuration, filesystem navigation, environment variables, file permissions, and network service discovery. I also researched how Kali tools apply to common security scenarios.
 
-Machine-specific information and original course materials have been excluded from this repository.
+Machine-specific information, internal addresses, and original course materials have been excluded from this repository.
 
 ## Project Overview
 
@@ -11,11 +11,13 @@ I built this project to strengthen my Linux and networking fundamentals. The exe
 ## Skills Demonstrated
 
 - Linux command-line navigation and system inspection
-- IPv4 addressing and subnet interpretation
+- IPv4 addressing, routing, and subnet interpretation
 - DNS resolution and network-interface inspection
 - Filesystem and disk-usage analysis
 - Shell environment variables and executable search paths
 - Linux ownership and permission reasoning
+- Nmap host, port, service, and version discovery
+- Evidence-based vulnerability research with SearchSploit and CVE records
 - Active reconnaissance versus passive monitoring
 - Security-tool selection for forensics, networking, Bluetooth, and Android analysis
 
@@ -25,6 +27,7 @@ I built this project to strengthen my Linux and networking fundamentals. The exe
 | --- | --- |
 | [Linux Fundamentals](linux-fundamentals.md) | Commands, observations, and security relevance from the hands-on exercises |
 | [Kali Tools Overview](kali-tools-overview.md) | Tool-to-task decisions for five security scenarios |
+| [Network Service and Vulnerability Discovery Lab](network-service-vulnerability-discovery/README.md) | Authorized host discovery, TCP and UDP enumeration, service validation, and vulnerability research |
 | [Lessons Learned](notes/lessons-learned.md) | Key takeaways and next steps for deeper SOC practice |
 
 ## Highlights
@@ -36,6 +39,10 @@ I used standard Linux utilities to inspect boot time, kernel information, storag
 ### Permission Behavior
 
 I created a temporary file, changed its owner to `root` with elevated privileges, verified the result, and examined why a user may still delete that file from a user-owned directory. The exercise reinforced that deletion is governed primarily by permissions on the containing directory, not only by ownership of the file.
+
+### Network Service Discovery
+
+I assessed an authorized private lab subnet with Nmap, identified five responsive systems, enumerated TCP and UDP services, and validated application versions. I then used SearchSploit and authoritative CVE records to document five qualified vulnerability candidates without exploiting the targets.
 
 ### Security-Tool Selection
 
@@ -59,7 +66,7 @@ echo "$SHELL"
 printf '%s\n' "$PATH"
 ```
 
-Raw command outputs are omitted from this overview. Selected screenshots are already included in [Linux Fundamentals](linux-fundamentals.md) and the [screenshots directory](screenshots/); network identifiers were removed before publication.
+Selected evidence is included with the individual write-ups. Original course documents and grading material are not published.
 
 ## Related SOC Project
 
